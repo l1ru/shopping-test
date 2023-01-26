@@ -1,8 +1,16 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
+interface Product {
+  id: number
   name: string
+  brand: String
+  description: string
+  price: number
+}
+
+type Data = {
+  products: Product[],
+  count: number
 }
 
 export default function handler(
