@@ -15,21 +15,15 @@ const ProductsContainer: React.FC = () => {
   let dispatch = useDispatch()
 
   let handleProductInCart = (product: IProduct) => dispatch(increment(product.id))
-
-  let [loading, setLoading] = useState(false)
   
-  let handleLoaded = (index: number) => {
-    setLoading(!(index + 1 === productStore.products.length))
-    console.log(loading)
-  }
 
   return (
     <Container>
       <Content>
         {productStore.products.map((product, index) => {
           return (
-            <Product key={product.id} className={`${loading ? 'loading' : ''}`} >
-              <Image src={product.photo} loading='lazy' alt={`${product.photo} image`} fill className='productImage' onLoadingComplete={() => handleLoaded(index)} />
+            <Product key={product.id} >
+              <Image src={product.photo} loading='lazy' alt={`${product.photo} image`} fill className='productImage' />
               <div className="texts">
                 <div className="title">
                   <h2>{product.name}</h2>
