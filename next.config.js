@@ -13,10 +13,6 @@ const nextConfig = {
       }
     ]
   },
-  pageExtensions: ['!.test.ts(x)', '!.spec.ts(x)'],
-  compiler: {
-    styledComponents: true
-  }
 }
 
 module.exports = nextConfig

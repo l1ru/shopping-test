@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import { Montserrat } from '@next/font/google'
 import { useEffect } from 'react'
 import axios from 'axios'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { setProducts, getProducts } from '../features/productsSlice'
-import { selectCart, cartSlice }  from '../features/cartSlice'
+import { setProducts } from '../features/productsSlice'
+import { selectCart }  from '../features/cartSlice'
 
-import * as S from './styles/home'
+import * as S from '../styles/HomeStyles'
 
-import CartButton from './components/CartButton'
-import ProductsContainer from './components/ProductsContainer'
-import Cart from './components/Cart'
+import CartButton from '../components/CartButton'
+import ProductsContainer from '../components/ProductsContainer'
+import Cart from '../components/Cart'
 
 
 export default function Home() {
