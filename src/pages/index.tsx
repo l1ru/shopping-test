@@ -12,6 +12,7 @@ import * as S from '../styles/HomeStyles'
 import CartButton from '../components/CartButton'
 import ProductsContainer from '../components/ProductsContainer'
 import Cart from '../components/Cart'
+import GlobalStyles from '@/styles/GlobalStyles'
 
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
+      <GlobalStyles />
       <S.Container>
         { cartStore.opened ? <Cart /> : null }
         <S.Header>
