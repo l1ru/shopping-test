@@ -12,6 +12,13 @@ const nextConfig = {
         pathname: '/products/**'
       }
     ]
+  },
+  pageExtensions: ['!.test.ts(x)', '!.spec.ts(x)'],
+  experimental: {
+    appDir: true
+  },
+  compiler: {
+    styledComponents: true
   }
 }
 
