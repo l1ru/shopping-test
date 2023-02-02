@@ -3,7 +3,7 @@ import cartReducer, {
   decrement,
   increment,
   toggleOpened
-} from '../cartSlice'
+} from '../features/cartSlice'
 
 describe('cart reducer', () => {
   const initialState: CartState = {
